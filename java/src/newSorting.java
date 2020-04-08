@@ -1,6 +1,6 @@
 class newSorting{
 
-    public static void newSorting(int[] A, int size){
+    void newSorting(int[] A, int size){
         if(size <= 0){
             size = 1;
         }
@@ -27,11 +27,11 @@ class newSorting{
             newSorting(LH, size);
             newSorting(RH, size);
 
-            mergeSortedHalves(A,LH,RH);
+            this.mergeSortedHalves(A,LH,RH);
         }
     }
 
-    public static void mergeSortedHalves(int[] A, int[] LH, int[] RH){
+     private void mergeSortedHalves(int[] A, int[] LH, int[] RH){
         int lh = 0;
         int rh = 0;
 
@@ -58,7 +58,7 @@ class newSorting{
 
     }
 
-    public static void toQuicksort(int arr[], int begin, int end) {
+    private void toQuicksort(int arr[], int begin, int end) {
         if (begin < end) {
             int partitionIndex = partitionOfQuicksort(arr, begin, end);
 
@@ -67,7 +67,7 @@ class newSorting{
         }
     }
     
-    public static int partitionOfQuicksort(int arr[], int begin, int end) {
+    private int partitionOfQuicksort(int arr[], int begin, int end) {
         int pivot = arr[end];
         int i = (begin-1);
 

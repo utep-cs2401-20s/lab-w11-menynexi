@@ -1,12 +1,14 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class NewSortingTester{
+public class newSortingTester{
 
-    //This test case was created to test if the populateArray worked correctly im taking a bottom up approach
+    //This test case was created to test if the populateArray worked correctly im taking a bottom up approach it was used to create the building's
+
+
 
     //this is used to test if mergeSortedHalves works when all the values are lower in LH first
-    @Test
+    /*@Test
     public void T1mergeSortedHalves(){
         int[] arr = {1,3,4,5};
         int[] LH = {1,3};
@@ -49,14 +51,17 @@ public class NewSortingTester{
 
         newSorting.toQuicksort(arr, 0, arr.length - 1);//arr.length -1 because it will
         assertArrayEquals(exp, arr);
-    }
+    }*/
+
+    //these cases where used to test the whole method new sorting
 
     @Test// this is testing when the array is smaller than the size given it should only make a single call to quicksort
     public void T5newSorting(){
         int[] arr = {1, 3, 2, 4};
         int[] exp = {1, 2, 3, 4};
 
-        newSorting.newSorting(arr, 5);
+        newSorting n = new newSorting();
+        n.newSorting(arr, 5);
         assertArrayEquals(exp, arr);
     }
 
@@ -66,7 +71,8 @@ public class NewSortingTester{
         int[] arr = {1, 3, 0, 0};
         int[] exp = {0, 0, 1, 3};
 
-        newSorting.newSorting(arr, 4);
+        newSorting n = new newSorting();
+        n.newSorting(arr, 4);
         assertArrayEquals(exp, arr);
     }
 
@@ -76,7 +82,8 @@ public class NewSortingTester{
         int[] arr = {1, 3, 2, 4, 7};
         int[] exp = {1, 2, 3, 4, 7};
 
-        newSorting.newSorting(arr, 3);
+        newSorting n = new newSorting();
+        n.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
 
@@ -85,32 +92,30 @@ public class NewSortingTester{
         int[] arr = {3, 8, 9, 7, 5, 4, 13};
         int[] exp = {3, 4, 5, 7, 8, 9, 13};
 
-        newSorting.newSorting(arr, 3);
+        newSorting n = new newSorting();
+        n.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
 
-    @Test// while testing size -1 I found out that it creates a stack overflow and went back and fixed it
+    @Test// while testing size -1 I found out that it creates a stack overflow and went back and fixed it by implementing an if statement
     public void T9newSorting(){
         int[] arr = {12, 7, 5, 4, 22};
         int[] exp = {4, 5, 7, 12, 22};
 
-        newSorting.newSorting(arr, -1);
+        newSorting n = new newSorting();
+        n.newSorting(arr, -1);
         assertArrayEquals(exp, arr);
     }
 
-    @Test
+    @Test// I used this test case because I wanted to test the effect of implementation if it was given a negative integer would it compute properly
     public void T10newSorting(){
         int[] arr = {12, -7, 5, -4, 22};
         int[] exp = {-7, -4, 5, 12, 22};
 
-        newSorting.newSorting(arr, 3);
+        newSorting n = new newSorting();
+        n.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
-
-
-
-
-
 
 
 
