@@ -13,7 +13,7 @@ public class NewSortingTester{
         int[] RH = {4,5};
         int[] exp = {1, 3, 4, 5};
 
-        NewSorting.mergeSortedHalves(arr, LH, RH);
+        newSorting.mergeSortedHalves(arr, LH, RH);
         assertArrayEquals(exp, arr);
     }
 
@@ -25,7 +25,7 @@ public class NewSortingTester{
         int[] RH = {1,3};
         int[] exp = {1, 3, 4, 5};
 
-        NewSorting.mergeSortedHalves(arr, LH, RH);
+        newSorting.mergeSortedHalves(arr, LH, RH);
         assertArrayEquals(exp, arr);
     }
 
@@ -37,7 +37,7 @@ public class NewSortingTester{
         int[] RH = {2,4};
         int[] exp = {1, 2, 3, 4};
 
-        NewSorting.mergeSortedHalves(arr, LH, RH);
+        newSorting.mergeSortedHalves(arr, LH, RH);
         assertArrayEquals(exp, arr);
     }
 
@@ -47,7 +47,7 @@ public class NewSortingTester{
         int[] arr = {1, 3, 2, 4};
         int[] exp = {1, 2, 3, 4};
 
-        NewSorting.toQuicksort(arr, 0, arr.length - 1);//arr.length -1 because it will
+        newSorting.toQuicksort(arr, 0, arr.length - 1);//arr.length -1 because it will
         assertArrayEquals(exp, arr);
     }
 
@@ -56,7 +56,7 @@ public class NewSortingTester{
         int[] arr = {1, 3, 2, 4};
         int[] exp = {1, 2, 3, 4};
 
-        NewSorting.newSorting(arr, 5);
+        newSorting.newSorting(arr, 5);
         assertArrayEquals(exp, arr);
     }
 
@@ -66,7 +66,7 @@ public class NewSortingTester{
         int[] arr = {1, 3, 0, 0};
         int[] exp = {0, 0, 1, 3};
 
-        NewSorting.newSorting(arr, 4);
+        newSorting.newSorting(arr, 4);
         assertArrayEquals(exp, arr);
     }
 
@@ -76,7 +76,7 @@ public class NewSortingTester{
         int[] arr = {1, 3, 2, 4, 7};
         int[] exp = {1, 2, 3, 4, 7};
 
-        NewSorting.newSorting(arr, 3);
+        newSorting.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
 
@@ -85,7 +85,7 @@ public class NewSortingTester{
         int[] arr = {3, 8, 9, 7, 5, 4, 13};
         int[] exp = {3, 4, 5, 7, 8, 9, 13};
 
-        NewSorting.newSorting(arr, 3);
+        newSorting.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
 
@@ -94,7 +94,7 @@ public class NewSortingTester{
         int[] arr = {12, 7, 5, 4, 22};
         int[] exp = {4, 5, 7, 12, 22};
 
-        NewSorting.newSorting(arr, -1);
+        newSorting.newSorting(arr, -1);
         assertArrayEquals(exp, arr);
     }
 
@@ -103,7 +103,7 @@ public class NewSortingTester{
         int[] arr = {12, -7, 5, -4, 22};
         int[] exp = {-7, -4, 5, 12, 22};
 
-        NewSorting.newSorting(arr, 3);
+        newSorting.newSorting(arr, 3);
         assertArrayEquals(exp, arr);
     }
 

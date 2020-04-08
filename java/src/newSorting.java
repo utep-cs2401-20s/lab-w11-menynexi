@@ -1,4 +1,4 @@
-class NewSorting{
+class newSorting{
 
     public static void newSorting(int[] A, int size){
         if(size <= 0){
